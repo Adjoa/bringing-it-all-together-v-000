@@ -68,4 +68,11 @@ class Dog
     Dog.new(id: dog[0], name: dog[1], breed: dog[2])
   end
 
+  def self.find_by_name(name)
+    sql = <<-SQL
+      SELECT * FROM dogs WHERE name = ?
+    SQL
+
+    row = DB[:conn].execute(sql, name).flatten
+    Dog.new(id: dog[0], name: dog[1], breed: dog[2])
 end
