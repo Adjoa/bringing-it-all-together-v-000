@@ -22,5 +22,5 @@ class Dog
   end
   song
   end
-  
+
 end
