@@ -39,6 +39,11 @@ class Dog
     self
   end
 
+  def self.create(attributes)
+    dog = self.new(attributes)
+    dog
+  end
+
   def self.find_or_create_by(name:, album:)
   song = DB[:conn].execute("SELECT * FROM songs WHERE name = ? AND album = ?", name, album)
   if !song.empty?
