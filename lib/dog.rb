@@ -74,6 +74,6 @@ class Dog
     SQL
 
     row = DB[:conn].execute(sql, name).flatten
-    Dog.new(id: dog[0], name: dog[1], breed: dog[2])
+    Dog.new(id: row[0], name: row[1], breed: row[2])
   end
 end
