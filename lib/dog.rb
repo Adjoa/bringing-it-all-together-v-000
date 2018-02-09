@@ -41,7 +41,6 @@ class Dog
 
   def self.create(attributes)
     dog = self.new(attributes)
-    dog
   end
 
   def self.find_or_create_by(name:, album:)
