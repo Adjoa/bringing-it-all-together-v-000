@@ -20,6 +20,14 @@ class Dog
     DB[:conn].execute(sql)
   end
 
+  def self.drop_table
+    sql=<<-SQL
+      DROP TABLE IF EXISTS dogs
+    SQL
+
+    DB[:conn].execute(sql)  
+  end
+
   def self.find_or_create_by(name:, album:)
   song = DB[:conn].execute("SELECT * FROM songs WHERE name = ? AND album = ?", name, album)
   if !song.empty?
