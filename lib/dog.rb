@@ -17,7 +17,7 @@ class Dog
       );
     SQL
 
-    DB[:conn].execute()
+    DB[:conn].execute(sql)
   end
 
   def self.find_or_create_by(name:, album:)
