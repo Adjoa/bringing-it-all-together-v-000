@@ -25,7 +25,7 @@ class Dog
       DROP TABLE IF EXISTS dogs
     SQL
 
-    DB[:conn].execute(sql)  
+    DB[:conn].execute(sql)
   end
 
   def self.find_or_create_by(name:, album:)
